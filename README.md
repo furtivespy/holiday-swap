@@ -1,6 +1,6 @@
 # Holiday Swap
 
-Site to facilitate a White Elephant or Yankee Swap
+App to facilitate a White Elephant or Yankee Swap
 
 ## Notes
 
