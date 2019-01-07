@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Callout } from "@blueprintjs/core"
+import { Callout, Classes } from "@blueprintjs/core"
 import { isLoaded, isEmpty } from 'react-redux-firebase'
 import * as actions from '../actions/authActions'
 
@@ -23,10 +23,10 @@ export class Login extends React.Component {
                 </Callout>
                 <p></p>
                 {!isLoaded(this.props.auth) || isEmpty(this.props.auth) ? 
-                <div><button className="pt-button" onClick={this.loginTwitter}>
+                <div><button className={Classes.BUTTON} onClick={this.loginTwitter}>
                     <img src={require("./sign-in-with-twitter-link.png")} alt="Sign In With Twitter" />
                 </button></div> :
-                <div><button className="pt-button" onClick={this.logout}>Logout</button></div> }
+                <div><button className={Classes.BUTTON} onClick={this.logout}>Logout</button></div> }
             </div>
         )
     }

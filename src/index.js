@@ -4,7 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import configureStore, { history } from './store/configureStore';
-import Root from './components/Root';
+import Root from './base/Root';
 import '@blueprintjs/core/lib/css/blueprint.css'
 import '@blueprintjs/icons/lib/css/blueprint-icons.css'
 require('./favicon.ico'); // Tell webpack to load favicon.ico
@@ -18,8 +18,8 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    const NewRoot = require('./components/Root').default;
+  module.hot.accept('./base/Root', () => {
+    const NewRoot = require('./base/Root').default;
     render(
       <AppContainer>
         <NewRoot store={store} history={history} />

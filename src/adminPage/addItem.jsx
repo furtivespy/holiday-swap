@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Field, reduxForm } from 'redux-form';
-import { Button} from '@blueprintjs/core'
+import { Button, Classes} from '@blueprintjs/core'
 
 const FullDiv = styled.div`
     width: 100%;
@@ -18,7 +18,7 @@ const InputBar = styled.input`
 `
 
 const BluePrintInput = (props) => (
-    <InputBar className="pt-input" placeholder={props.placeholder}  type="text" {...props.input}  />
+    <InputBar className={Classes.INPUT} placeholder={props.placeholder}  type="text" {...props.input}  />
 )
 
 const AddItem = (props) => {

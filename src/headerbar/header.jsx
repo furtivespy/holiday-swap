@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Navbar, NavbarGroup, NavbarDivider, NavbarHeading, Button, Alignment, Icon} from '@blueprintjs/core'
+import {Navbar, NavbarGroup, NavbarDivider, NavbarHeading, Button, Alignment, Icon, Classes} from '@blueprintjs/core'
 import { isLoaded, isEmpty } from 'react-redux-firebase'
 import {Link} from 'react-router-dom'
 
@@ -23,7 +23,7 @@ class Header extends React.Component {
             <Navbar>
                 <NavbarGroup align={Alignment.LEFT}>
                     <NavbarHeading><Title>Holiday Swap!</Title></NavbarHeading>
-                    <input className="pt-input" placeholder="Searh does nothing..." type="text" />
+                    <input className={Classes.INPUT} placeholder="Searh does nothing..." type="text" />
                 </NavbarGroup>
                 <NavbarGroup align={Alignment.RIGHT}>
                     <Link to="/"><Button minimal={true} icon="home">Home</Button></Link>
