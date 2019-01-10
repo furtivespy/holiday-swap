@@ -20,11 +20,11 @@ BluePrintInput.propTypes = {
 
 class MainCard extends React.Component {
     render() {
-        const { handleSubmit, placeholder, buttonText } = this.props
+        const { handleSubmit, headingText, placeholder, buttonText } = this.props
         return (
         <Card elevation={Elevation.TWO}>
             <form onSubmit={handleSubmit}>
-                <h5>Card heading</h5>
+                <h3>{headingText}</h3>
                 <p><Field name="itemInput" id="itemInput" placeholder={placeholder} component={BluePrintInput} /></p>
                 <p><Button type="submit">{buttonText}</Button></p>
             </form>
@@ -34,11 +34,13 @@ class MainCard extends React.Component {
 }
 MainCard.defaultProps = {
     handleSubmit: () => {},
+    headingText: "HEADING",
     placeholder: "Type Here",
     buttonText:  "SubMit"
 }
 MainCard.propTypes = {
     handleSubmit: PropTypes.func,
+    headingText: PropTypes.string,
     placeholder: PropTypes.string,
     buttonText: PropTypes.string
 }
