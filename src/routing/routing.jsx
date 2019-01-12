@@ -5,6 +5,7 @@ import HomePage from "../homePage/homePage"
 import NotFoundPage from "./NotFoundPage"
 import PrivateRoute from "./privateRoute"
 import Login from '../login/Login'
+import TestPage from '../testPage/testPage'
 
 
 class Routing extends React.Component {
@@ -14,6 +15,7 @@ class Routing extends React.Component {
           <Route exact path="/" component={HomePage} />
           <PrivateRoute path="/admin" component={AdminPage} />
           <Route path='/login' component={Login} />
+          <Route path='/test/:gameId' component={TestPage} />
           <Route component={NotFoundPage} />
         </Switch>
     );
